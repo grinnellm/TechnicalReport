@@ -53,3 +53,4 @@ Example.tex
 *.toc
 *.synctex.gz
 Example-concordance.tex
+.RHistory
