@@ -1,4 +1,4 @@
-%% This file has been edited to conform with DFO Techinical Reports
+%% This file has been edited to conform with DFO Techinical Report requirements
 %%
 %% This is file `cjfas.bst',
 %% generated with the docstrip utility.
