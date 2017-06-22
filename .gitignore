@@ -45,3 +45,11 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Custom files
+*.log
+*.pdf
+Example.tex
+*.toc
+*.synctex.gz
+Example-concordance.tex
