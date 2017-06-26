@@ -1,4 +1,4 @@
-# Clean up the directory after a LaTeX build. Windows version.
+# Clean up the directory after a LaTeX build - windows version
 # Made by Chris Grandin
 del *.aux
 del *.bbl
