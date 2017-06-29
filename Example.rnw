@@ -1,4 +1,4 @@
-%%%%% Preamble %%%%%
+%%%%% Set up %%%%%
 
 % Set document style and font size
 \documentclass[12pt]{article}
@@ -6,80 +6,62 @@
 % Style file for DFO Technical Reports
 \usepackage{Document/TechReport}
 
+%%%%% Variables %%%%%
+
 % New definitions: Title, year, report number, authors
 % Put words in math mode to prevent case changes (e.g., species name)
-\newcommand{\trTitle}{This is an interesting species ($Clupea$ $pallasii$)}
-\newcommand{\trYear}{2017}
-\newcommand{\trReportNum}{XXXX}
-\newcommand{\trAuthFootA}{\footnote{E-mail: \texttt{First.Author@dfo-mpo.gc.ca} $|$ telephone: (250)~XXX.XXXX}}
-\newcommand{\trAuthsLong}{First A. Author,\trAuthFootA{} and Second B. Author}
-\newcommand{\trAuthsBack}{Author, F.A., and Author, S.B}
+\newcommand{\trTitle}{Everything you need to know about Pacific herring ($Clupea$ $pallasii$) in British Columbia, Canada}
+\newcommand{\trYear}{XXXX}
+\newcommand{\trReportNum}{YYYY}
+% Optional
+\newcommand{\trAuthFootA}{\footnote{E-mail: \texttt{First.Aurhor@dfo-mpo.gc.ca} $|$ telephone: (250)~756.ZZZZ}}
+\newcommand{\trAuthsLong}{First A. Author,\trAuthFootA{} Second B. Author}
+\newcommand{\trAuthsBack}{Author, F.A., and Author, S.B.}
 
 % New definition: Address
 \newcommand{\trAddy}{Fisheries and Oceans Canada\\Science Branch, Pacific Region\\Pacific Biological Station\\3190 Hammond Bay Road\\Nanaimo, BC \enskip V9T 6N7}
 
-% New definition: Citation
-\newcommand{\trCitation}{
-\begin{hangparas}{1em}{1}
-\trAuthsBack{} \trYear{}. \trTitle{}. Can. Tech. Rep. Fish. Aquat. Sci. \trReportNum{}: \pageref{TRlastRoman}{}\,+\,\pageref{LastPage}{}\,p.
-\end{hangparas}}
-
-
 % Abstract
 \newcommand{\trAbstract}{
-This is the abstract.
-}
+This is the abstract.}
 
 % Resume (i.e., French abstract)
 \newcommand{\trResume}{
-[Et en français...]
+Et en français...
 }
 
-% Settings for draft: line numbers and spacing
-%\linenumbers  % For drafts
-%\onehalfspacing  % For drafts
+%%%%% Start %%%%%
 
-% Let it begin..
+% Start the document
 \begin{document}
-
-% Sections in capitals
-\renewcommand\listfigurename{LIST OF FIGURES}
-\renewcommand\listtablename{LIST OF TABLES}
-
-% Footnote symbols in front matter
-\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
 
 %%%% Front matter %%%%%
 
-% Format the first few pages
-\input{Document/1CoverPage.tex}  % Cover page
-\input{Document/2TechReportPage.tex}  % Tech report page
-\input{Document/3InsideCoverPage.tex}  % Inside cover page
-\input{Document/4ColophonPage.tex}  % Colophon page
-\pdfbookmark[1]{\contentsname}{toc}  % Add TOC to pdf bookmarks (clickable pdf)
-\tableofcontents\clearpage  % Table of contents page
-%\listoffigures \listoftables \clearpage  % Lists of figures and tables (optional)
-\input{Document/5AbstractPage.tex}  % Abstact and resume page
+% Add the first few pages
+\frontmatter
 
-% Settings for the main document
-\pagenumbering{arabic}  % Regular page numbers
-%\thispagestyle{empty}  % No page number on first page
-\renewcommand*{\thefootnote}{\arabic{footnote}}  % Back to numeric footnotes
-\setcounter{footnote}{0}  % And start at 1
+%%%%% Drafts %%%%%
 
-% Settings for draft: header
-\renewcommand{\headrulewidth}{1pt}  % Header line
-\pagestyle{fancy}\fancyhead[c]{Draft: Do not cite or circulate}  % Header text
+%\linenumbers  % Line numbers
+%\onehalfspacing  % Extra space between lines
+%\renewcommand{\headrulewidth}{1pt}  % Header line
+%\pagestyle{fancy}\fancyhead[c]{Draft: Do not cite or circulate}  % Header text
 
 %%%%% Main document %%%%%
 
 \section{INTRODUCTION}
 
-This is the introduction.
+Introduction text. Input tables, figures, citations, and references as usual.
+
+%%%%% References %%%%%
+
+% Style file
+\bibliographystyle{Document/CJFAS}
 
 % References
-\bibliographystyle{Document/CJFAS}
-%\addcontentsline{toc}{section}{\refname}\bibliography{Document/Example}
+%\addcontentsline{toc}{section}{\refname}\bibliography{Document/[FileName]}
+
+%%%%% Fin %%%%%
 
 % The end
 \end{document}
