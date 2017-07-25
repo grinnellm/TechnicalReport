@@ -26,10 +26,11 @@
 \RequirePackage[hidelinks]{hyperref}  % Better cross references
 \RequirePackage{letltxmacro}  % Enable/disable footnotes
 \RequirePackage{pdfpages}  % Include PDF documents
+\RequirePackage[T1]{fontenc}  % Allow french characters (Resume)
 %\RequirePackage[titletoc, title]{appendix}  % Nicer appendices
+%\RequirePackage[utf8]{inputenc}  % Allow french characters (Resume)
 
 %%%%% Parameters %%%%%
-
 % General layout parameters for all pages:
 \renewcommand{\topfraction}{0.9}  % Max fraction of floats at top
 \renewcommand{\bottomfraction}{0.8}  % Max fraction of floats at bottom
@@ -46,7 +47,7 @@
 \renewcommand{\floatpagefraction}{0.85}  % Require fuller float pages
 \renewcommand{\dblfloatpagefraction}{0.7}  % Require fuller float pages
 
-% Line numbers don't like equations: this is a fix
+% Line numbers (e.g., for drafts) don't like equations: this is a fix
 \newcommand*\patchAmsMathEnvironmentForLineno[1]{%
   \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
   \expandafter\let\csname oldend#1\expandafter\endcsname\csname end#1\endcsname
@@ -75,6 +76,18 @@
 \sectionfont{\normalsize\centering\noindent}  % Section formatting
 \subsectionfont{\normalsize\raggedright\noindent}  % Subsection formatting
 
+% Yes, ugly, but that's the rules (Or is it? Might not be required)
+%\raggedright  % Ragged right
+%\raggedbottom  % Ragged bottom
+%\setlength\parindent{0pt}  % To not indent paragraphs
+%\parskip 2ex  %Increase white space between paragraphs
+%\captionsetup{justification=raggedright}
+
+% Uglier, but that's the rules (Or is it? Might not be required)
+%\RequirePackage{helvet}  % Similar to Arial, for text
+%\renewcommand{\familydefault}{\sfdefault}
+%\RequirePackage{sfmath}
+
 % Ensure auto-generated sections are uppercase
 \addto\captionsenglish{\renewcommand{\contentsname}{CONTENTS}}
 \addto\captionsenglish{\renewcommand{\refname}{REFERENCES}}
@@ -82,7 +95,7 @@
 \addto\captionsenglish{\renewcommand{\appendixname}{APPENDIX}}
 
 % Words that stay lowercase (for title case)
-\Addlcwords{a and as but etc for if in is of on the to with}
+\Addlcwords{a and as but etc for if in is of on the to with pallasi}
 
 % Better treatment of input (no extra trailing space)
 \newcommand{\inputsp}[1]{\input{#1}\unskip}

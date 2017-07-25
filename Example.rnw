@@ -9,8 +9,8 @@
 %%%%% Variables %%%%%
 
 % New definitions: Title, year, report number, authors
-% Put words in math mode to prevent case changes (e.g., species name)
-\newcommand{\trTitle}{Everything you need to know about Pacific herring ($Clupea$ $pallasii$) in British Columbia, Canada}
+% Protect lower case words (i.e., species names) in \Addlcwords{}
+\newcommand{\trTitle}{Everything you need to know about Pacific herring (\textit{Clupea pallasi}) in British Columbia, Canada}
 \newcommand{\trYear}{XXXX}
 \newcommand{\trReportNum}{YYYY}
 % Optional
