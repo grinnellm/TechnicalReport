@@ -27,8 +27,6 @@
 \RequirePackage{letltxmacro}  % Enable/disable footnotes
 \RequirePackage{pdfpages}  % Include PDF documents
 \RequirePackage[T1]{fontenc}  % Allow french characters (Resume)
-%\RequirePackage[titletoc, title]{appendix}  % Nicer appendices
-%\RequirePackage[utf8]{inputenc}  % Allow french characters (Resume)
 
 %%%%% Parameters %%%%%
 % General layout parameters for all pages:
@@ -72,20 +70,20 @@
 \bibpunct{(}{)}{;}{a}{}{,}  % Punctuation for citations
 \fancyhead{}  % No header
 \sloppy  % No text in margins (line length)
-\setlength\parindent{1em}  % Paragraph indent
+%\setlength\parindent{1em}  % Paragraph indent
 \sectionfont{\normalsize\centering\noindent}  % Section formatting
 \subsectionfont{\normalsize\raggedright\noindent}  % Subsection formatting
 
 % Yes, ugly, but that's the rules (Or is it? Might not be required)
 %\raggedright  % Ragged right
 %\raggedbottom  % Ragged bottom
-%\setlength\parindent{0pt}  % To not indent paragraphs
-%\parskip 2ex  %Increase white space between paragraphs
-%\captionsetup{justification=raggedright}
+%\setlength\parindent{0pt}  % No indent paragraphs
+%\parskip 2ex  % Increase white space between paragraphs
+%\captionsetup{justification=raggedright, singlelinecheck=off}
+%\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
 
-% Uglier, but that's the rules (Or is it? Might not be required)
-%\RequirePackage{sansmathfonts}
-%\RequirePackage{helvet}
+% Even uglier, but that's the rules (Or is it? Might not be required)
+%\RequirePackage{helvet}  % Font for text
 %\renewcommand{\familydefault}{\sfdefault}
 
 % Ensure auto-generated sections are uppercase
@@ -162,9 +160,9 @@
 \LARGE
 \textbf{Canadian Technical Report of\\
 Fisheries and Aquatic Sciences \trReportNum{}}
-\lfoot{\includegraphics[height=7mm]{Document/LogoDFO.png}}
+\lfoot{\includegraphics[height=7mm]{\locRes/LogoDFO.png}}
 \cfoot{}
-\rfoot{\includegraphics[height=7mm]{Document/LogoCanada.jpg}}
+\rfoot{\includegraphics[height=7mm]{\locRes/LogoCanada.jpg}}
 \end{flushleft}
 \EnableFootNotes
 \clearpage
@@ -232,7 +230,7 @@ Fisheries and Aquatic Sciences \trReportNum{}
 \vfill
 \trYear{}
 \vfill
-\MakeTextUppercase{\trTitle{}}
+\textnormal{\MakeTextUppercase{\trTitle{}}}
 \vfill
 by
 \vfill

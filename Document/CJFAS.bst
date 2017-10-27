@@ -1,4 +1,3 @@
-%% This file has been edited to conform with DFO Techinical Report requirements
 %%
 %% This is file `cjfas.bst',
 %% generated with the docstrip utility.
@@ -1546,13 +1545,13 @@ FUNCTION {begin.bib}
   write$ newline$
   "\providecommand{\url}[1]{\texttt{#1}}"
   write$ newline$
-  "\providecommand{\urlprefix}{URL }"
+  "\providecommand{\urlprefix}{URL\,}"
   write$ newline$
   "\expandafter\ifx\csname urlstyle\endcsname\relax"
   write$ newline$
-  "  \providecommand{\doi}[1]{DOI: \discretionary{}{}{}#1}\else"
+  "  \providecommand{\doi}[1]{DOI\,\discretionary{}{}{}#1}\else"
   write$ newline$
-  "  \providecommand{\doi}{DOI: \discretionary{}{}{}\begingroup \urlstyle{rm}\Url}\fi"
+  "  \providecommand{\doi}{DOI\,\discretionary{}{}{}\begingroup \urlstyle{rm}\Url}\fi"
   write$ newline$
 }
 EXECUTE {begin.bib}
