@@ -64,6 +64,16 @@
 \patchBothAmsMathEnvironmentsForLineno{multline}%
 }
 
+% Section formatting (in titles only, not x-refs or toc)
+%\makeatletter
+%\def\@seccntformat#1{\@ifundefined{#1@cntformat}%
+%   {\csname the#1\endcsname}%  default
+%   {\csname #1@cntformat\endcsname}}%  enable individual control
+%\newcommand{\section@cntformat}{\thesection.0.\ \ }% Trailing zero and dot
+%\newcommand{\subsection@cntformat}{\thesubsection.\ \ }% Trailing dot
+%\newcommand{\subsubsection@cntformat}{\thesubsubsection.\ \ }% Trailing dot
+%\makeatother
+
 % Update definitions
 \renewcommand{\headrulewidth}{0pt}  % No header line
 \setlength{\headheight}{14.5pt}
@@ -160,9 +170,9 @@
 \LARGE
 \textbf{Canadian Technical Report of\\
 Fisheries and Aquatic Sciences \trReportNum{}}
-\lfoot{\includegraphics[height=7mm]{\locRes/LogoDFO.png}}
+\lfoot{\includegraphics[height=7mm, keepaspectratio]{\locRes/LogoDFO.png}}
 \cfoot{}
-\rfoot{\includegraphics[height=7mm]{\locRes/LogoCanada.jpg}}
+\rfoot{\includegraphics[height=7mm, keepaspectratio]{\locRes/LogoCanada.jpg}}
 \end{flushleft}
 \EnableFootNotes
 \clearpage
@@ -287,4 +297,4 @@ Correct citation for this publication:
 \renewcommand*{\thefootnote}{\arabic{footnote}}  % Back to numeric footnotes
 \setcounter{footnote}{0}  % And start at 1
 
-}
+}% End of frontmatter
