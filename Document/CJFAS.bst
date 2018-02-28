@@ -364,9 +364,16 @@ FUNCTION {bibinfo.warn}
   if$
 }
 FUNCTION {format.url}
-{ url empty$
+{
+  doi empty$
+    {    
+      url
+      duplicate$ empty$
+        { pop$ "" }
+        { "\urlprefix\url{" swap$ * "}" * }
+      if$
+    }
     { "" }
-    { "\urlprefix\url{" url * "}" * }
   if$
 }
 
