@@ -28,6 +28,7 @@
 \RequirePackage{pdfpages}  % Include PDF documents
 \RequirePackage[T1]{fontenc}  % Allow french characters (Resume)
 \RequirePackage{doi}  % DOI hyperlinks in references
+\RequirePackage{tikz}  % >% Flow diagram
 
 %%%%% Parameters %%%%%
 % General layout parameters for all pages:
@@ -96,6 +97,16 @@
 % Even uglier, but that's the rules (Or is it? Might not be required)
 %\RequirePackage{helvet}  % Font for text
 %\renewcommand{\familydefault}{\sfdefault}
+
+% Flow diagram options\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{shapes, arrows, shapes.geometric}
+\tikzstyle{decision} = [diamond, draw, fill=blue!20, 
+    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
+    minimum height=2em]
 
 % Ensure auto-generated sections are uppercase
 \addto\captionsenglish{\renewcommand{\contentsname}{CONTENTS}}
