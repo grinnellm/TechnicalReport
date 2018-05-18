@@ -29,6 +29,7 @@
 \RequirePackage[T1]{fontenc}  % Allow french characters (Resume)
 \RequirePackage{doi}  % DOI hyperlinks in references
 \RequirePackage{tikz}  % >% Flow diagram
+\RequirePackage[title]{appendix}  % More appendix options
 
 %%%%% Parameters %%%%%
 % General layout parameters for all pages:
@@ -111,6 +112,9 @@
 \addto\captionsenglish{\renewcommand{\refname}{REFERENCES}}
 \addto\captionsenglish{\renewcommand{\indexname}{INDEX}}
 \addto\captionsenglish{\renewcommand{\appendixname}{APPENDIX}}
+
+% Add 'appendix' to \autoref labels
+\newcommand*{\Appendixautorefname}{appendix}
 
 % Words that stay lowercase (for title case)
 \Addlcwords{a and as but etc for if in is of on the to with pallasi}
