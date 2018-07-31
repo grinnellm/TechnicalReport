@@ -50,6 +50,7 @@ Temporary Items
 *.log
 *.pdf
 Example.tex
+*.bib.bak
 *.toc
 *.synctex.gz
 Example-concordance.tex

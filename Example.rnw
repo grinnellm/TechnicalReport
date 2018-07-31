@@ -55,7 +55,7 @@ Et en français...
 
 \section{INTRODUCTION}
 
-Introduction text. Input tables, figures, citations, and references as usual.
+Introduction text about Pacific Herring \citep{KronlundEtal2018}. Input tables, figures, citations, and references as usual.
 
 % TODO: Add some example tables, figures, citations, and references. And an appendix.
 
@@ -65,7 +65,7 @@ Introduction text. Input tables, figures, citations, and references as usual.
 \bibliographystyle{Document/CJFAS}
 
 % References
-%\addcontentsline{toc}{section}{\refname}\bibliography{Document/[FileName]}
+\addcontentsline{toc}{section}{\refname}\bibliography{Example}
 
 %%%%% Fin %%%%%
 
