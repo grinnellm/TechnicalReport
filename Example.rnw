@@ -3,14 +3,18 @@
 % Set document style and font size
 \documentclass[12pt]{article}
 
+% File path to resources (style file etc)
+\newcommand{\locRes}{Document}
+
 % Style file for DFO Technical Reports
-\usepackage{Document/TechReport}
+\usepackage{\locRes/TechReport}
+
 
 %%%%% Variables %%%%%
 
 % New definitions: Title, year, report number, authors
 % Protect lower case words (i.e., species names) in \Addlcwords{}
-\newcommand{\trTitle}{Everything you need to know about Pacific herring (\textit{Clupea pallasi}) in British Columbia, Canada}
+\newcommand{\trTitle}{Everything you need to know about Pacific herring ($Clupea$ $pallasii$) in British Columbia, Canada}
 \newcommand{\trYear}{XXXX}
 \newcommand{\trReportNum}{YYYY}
 % Optional
@@ -52,6 +56,8 @@ Et en français...
 \section{INTRODUCTION}
 
 Introduction text. Input tables, figures, citations, and references as usual.
+
+% TODO: Add some example tables, figures, citations, and references. And an appendix.
 
 %%%%% References %%%%%
 
