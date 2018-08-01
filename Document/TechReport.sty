@@ -123,8 +123,11 @@
 % Better treatment of input (no extra trailing space)
 \newcommand{\inputsp}[1]{\input{#1}\unskip}
 
-% Multi-letter identifier (i.e., multi-character variable
-\newcommand{\mli}[1]{\mathit{#1}}
+% Math symbols
+\newcommand{\mli}[1]{\mathit{#1}}  % Multi-letter identifier (i.e., multi-character variable
+\newcommand{\mean}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}  % Bar (mean)
+\newcommand{\est}[1]{\widehat{#1}}  % Hat/circumflex (estimate)
+\newcommand{\til}[1]{\widetilde{#1}}  % Tilde (special)
 
 % Allow wide tables to spill into both margins equally: \centerfloat
 \makeatletter
