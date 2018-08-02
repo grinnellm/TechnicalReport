@@ -10,7 +10,8 @@ I also included Chris Grandin's batch file `clean.bat` to remove temporary files
 
 ## What you need to do
 
-First, make sure that the file path in `\rocRes` is valid (i.e., `\newcommand{\locRes}{Document}` should indicate the location of your local copy of the "/Document" folder).
+First, make sure that the file path in `\locRes` is valid (i.e., `\newcommand{\locRes}{Document}` should indicate the location of your local copy of the "/Document" folder).
+
 Generating your own report formatting should be fairly self-explanatory.
 You will have to edit the custom commands in the `Variables` section of the example file `Example.rnw`.
 Follow the example format for author names etc.
@@ -19,6 +20,9 @@ If you have case sensitive words (e.g., species names) in the title, put them in
 the title on the cover page is "Title Case",
 and the title on the inside cover page is "ALL-CAPS".
 Finally, update the link to your BibTeX file in the `References` section.
+
+Instead of creating your Technical Report in the "/Document" folder, make a new copy of "Example.rnw".
+Then you'll have to update the file path in `\locRes` to point to "/Document."
 
 ## Note
 
