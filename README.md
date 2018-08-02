@@ -21,7 +21,7 @@ the title on the cover page is "Title Case",
 and the title on the inside cover page is "ALL-CAPS".
 Finally, update the link to your BibTeX file in the `References` section.
 
-Instead of creating your Technical Report in the "/Document" folder, make a new copy of "Example.rnw".
+Instead of creating your Technical Report in the "/Document" folder, make a copy of "Example.rnw" in another location.
 Then you'll have to update the file path in `\locRes` to point to "/Document."
 
 ## Note
