@@ -10,6 +10,7 @@ I also included Chris Grandin's batch file `clean.bat` to remove temporary files
 
 ## What you need to do
 
+First, make sure that the file path in `\rocRes` is valid (i.e., `\newcommand{\locRes}{Document}` should indicate the location of your local copy).
 Generating your own report formatting should be fairly self-explanatory.
 You will have to edit the custom commands in the `Variables` section of the example file `Example.rnw`.
 Follow the example format for author names etc.
