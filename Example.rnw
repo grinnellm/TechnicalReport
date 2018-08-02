@@ -14,11 +14,11 @@
 
 % Fish name
 \newcommand{\fishName}{Pacific Herring}
-% Science name
+% Science name: use math mode to prevent case changes
 \newcommand{\scienceName}{$Clupea$ $pallasii$}
 
 % New definitions: Title, year, report number, authors
-% Protect lower case words (i.e., species names) in \Addlcwords{}
+% Protect lower case words (i.e., species names) in \Addlcwords{}, in "TechReport.sty", and use math mode.
 \newcommand{\trTitle}{Everything you need to know about \fishName{} (\scienceName{}) in British Columbia, Canada}
 \newcommand{\trYear}{XXXX}
 \newcommand{\trReportNum}{YYYY}
@@ -60,7 +60,7 @@ Et en français...
 
 \section{INTRODUCTION}
 
-The following sections describe our model of algae egg density (\autoref{secEggDens}, and surface spawn (\autoref{secSurface}).
+The following sections describe our model of algae egg density (\autoref{secEggDens}, surface spawn (\autoref{secSurface}), Macrocystis spawn (\autoref{secMacro}), and understory spawn (\autoref{secUnder}).
 
 \subsection{ALGAE EGG DENSITY}\label{secEggDens}
 
@@ -137,6 +137,24 @@ Egg layers on flat algae are counted on both sides of the algae (\autoref{figLay
 Diagrams copied with permission from the \href{http://www.pac.dfo-mpo.gc.ca/science/species-especes/pelagic-pelagique/herring-hareng/hertags/pdf/SurveyManual.pdf}{\color{blue}{\fishName{} spawn survey manual}}.}
 \label{figLayers}
 \end{figure}
+
+\subsection{MACROCYSTIS SPAWN}\label{secMacro}
+
+Macrocystis spawn surveyors take a census of Macrocystis plants within $1\,\text{m}$ of the transect line, on both the left- and right-hand sides.
+We refer to the swath of substrate along Macrocystis transects as the transect swath, $\mli{Swath} = 2\,\text{m}$.
+Divers categorize Macrocystis plants as either `mature' or `immature' based on stipe height; mature plants have stipes $\geq1\,\text{m}$ high, and are the only plants used for Macrocystis spawn index calculations.
+Immature plants are excluded because \fishName{} spawn on Macrocystis fronds, not stipes; immature plants have limited fronds and slimy stipes that prevent egg adhesion.
+In addition, spawn is typically higher up in Macrocystis plants.
+For each mature plant, divers record height, number of stalks, and number of egg layers.
+For each transect, divers record the average number of egg layers.
+
+\subsection{UNDERSTORY SPAWN}\label{secUnder}
+
+Understory spawn surveyors place quadrats along transects, with a target frequency of $\geq 5$ quadrats per transect, given a minimum spacing of $2\,\text{m}$, and a maximum spacing of $40\,\text{m}$.
+Similar to how the first transect is moved in from one end of the spawn, the first quadrat is moved in from the edge of the spawn to the first $5\,\text{m}$ mark on the transect line to avoid surveying areas with patchy and sparse egg layers.
+Within each quadrat, divers record the dominant (i.e., most heavily spawned) substrate type, percentage of the quadrat covered by spawn, and number of egg layers.
+In addition, divers identify the three most abundant algae types that have spawn.
+For each of these algae types, divers record the percentage of the quadrat covered by the algae, and number of egg layers.
 
 %%%%% References %%%%%
 
