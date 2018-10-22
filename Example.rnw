@@ -36,7 +36,7 @@ This is the abstract.}
 
 % Resume (i.e., French abstract)
 \newcommand{\trResume}{
-Et en français...
+Et en fran?ais...
 }
 
 %%%%% Start %%%%%

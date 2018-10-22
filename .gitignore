@@ -55,3 +55,4 @@ Example.tex
 *.synctex.gz
 Example-concordance.tex
 .RHistory
+.Rproj.user
