@@ -53,7 +53,8 @@ Et en fran\c{c}ais...
 
 %\linenumbers  % Line numbers
 %\onehalfspacing  % Extra space between lines
-%\renewcommand{\headrulewidth}{1pt}  % Header line
+\renewcommand{\headrulewidth}{0.5pt}  % Header line
+\renewcommand{\footrulewidth}{0.5pt}  % footer line
 %\pagestyle{fancy}\fancyhead[c]{Draft: Do not cite or circulate}  % Header text
 
 %%%%% Main document %%%%%
