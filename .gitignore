@@ -56,3 +56,7 @@ Example.tex
 Example-concordance.tex
 .RHistory
 .Rproj.user
+
+# Example files
+Example.lof
+Example.lot

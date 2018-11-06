@@ -15,11 +15,11 @@
 % Fish name
 \newcommand{\fishName}{Pacific Herring}
 % Science name
-\newcommand{\scienceName}{\emph{Clupea pallasii}}
+\newcommand{\scienceName}{\textit{Clupea pallasii}}
 
 % New definitions: Title, year, report number, authors
 % Protect lower case words (i.e., species names) in \Addlcwords{}, in "TechReport.sty"
-\newcommand{\trTitle}{Everything you need to know about \fishName{} in British Columbia, Canada}
+\newcommand{\trTitle}{Everything you need to know about \fishName{} (\scienceName{}) in British Columbia, Canada}
 \newcommand{\trYear}{XXXX}
 \newcommand{\trReportNum}{YYYY}
 % Optional
@@ -36,7 +36,7 @@ This is the abstract.}
 
 % Resume (i.e., French abstract)
 \newcommand{\trResume}{
-Et en fran?ais...
+Et en fran\c{c}ais...
 }
 
 %%%%% Start %%%%%
