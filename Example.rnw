@@ -23,7 +23,7 @@
 \newcommand{\trYear}{XXXX}
 \newcommand{\trReportNum}{YYYY}
 % Optional
-\newcommand{\trAuthFootA}{\footnote{E-mail: \texttt{First.Aurhor@dfo-mpo.gc.ca} $|$ telephone: (250)~756.ZZZZ}}
+\newcommand{\trAuthFootA}{\footnote{E-mail: \texttt{First.Author@dfo-mpo.gc.ca} $|$ telephone: (250)~756.ZZZZ}}
 \newcommand{\trAuthsLong}{First A. Author,\trAuthFootA{} Second B. Author}
 \newcommand{\trAuthsBack}{Author, F.A., and Author, S.B.}
 
