@@ -17,7 +17,7 @@
 \RequirePackage{flafter}  % Floats after cross-references
 \RequirePackage{sectsty}  % Change section formatting
 \RequirePackage[english]{babel}  % Typographics and hyphenation
-\RequirePackage{titlecaps}  %  Case options for title
+% \RequirePackage{titlecaps}  %  Case options for title
 \RequirePackage{textcase}  % More case options for title
 \RequirePackage[labelsep=period]{caption}  % Dots in captions
 \RequirePackage{lmodern}  % Nicer (c) symbol
@@ -128,8 +128,8 @@
 % Add 'appendix' to \autoref labels (this doesn't seem to work)
 \newcommand*{\Appendixautorefname}{appendix}
 
-% Words that stay lowercase (for title case)
-\Addlcwords{a and as but etc for if in is of on the to with pallasii}
+% % Words that stay lowercase (for title case)
+% \Addlcwords{a and as but etc for if in is of on the to with pallasii}
 
 % Better treatment of input (no extra trailing space)
 \newcommand{\inputsp}[1]{\input{#1}\unskip}
@@ -187,7 +187,7 @@
 \noindent
 \begin{flushleft}
 \LARGE
-\textbf{\titlecap{\trTitle{}}}\\
+\textbf{\trTitle{}}\\
 \vfill
 \Large
 \trAuthsLong{}
