@@ -33,6 +33,7 @@
 \RequirePackage{subcaption}  % Panels within a figure
 \RequirePackage[utf8]{inputenc}  % French accents
 \RequirePackage{tabulary}  % Flexible column widths
+\RequirePackage{subcaption}  % Sub figures
 
 % Hyper links
 \hypersetup{colorlinks,
@@ -76,6 +77,9 @@
 \patchBothAmsMathEnvironmentsForLineno{gather}%
 \patchBothAmsMathEnvironmentsForLineno{multline}%
 }
+
+% Subfigure captions
+\newcommand{\subfloat}[2][need a sub-caption]{\subcaptionbox{#1}{#2}}
 
 % Section formatting (in titles only, not x-refs or toc)
 %\makeatletter
