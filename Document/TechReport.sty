@@ -182,8 +182,8 @@
 \renewcommand\listfigurename{LIST OF FIGURES}
 \renewcommand\listtablename{LIST OF TABLES}
 
-% Footnote symbols in front matter
-\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+% % Footnote symbols in front matter
+% \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
 
 % Prevent issues with the first two unnumbered pages
 \hypersetup{pageanchor=false}
@@ -197,7 +197,7 @@
 \textbf{\trTitle{}}\\
 \vfill
 \Large
-\trAuthsLong{}
+\trAuthsNoMath{}
 \vfill
 \trAddy{}
 \vfill
@@ -282,7 +282,7 @@ by
 \vfill
 \trAuthsLong{}
 \vfill
-\trAddy{}
+\trAffil{}
 \end{center}
 \clearpage
 
@@ -291,7 +291,7 @@ by
 \begin{center}
 \begin{minipage}{\widthof{\copyright{} Her Majesty the Queen in Right of Canada, \trYear{}}}
 \copyright{} Her Majesty the Queen in Right of Canada, \trYear{}\\
-Cat. No. Fs97-6/\trReportNum{} E \hfill ISSN 0706-6457\\
+Cat. No. Fs97-6/\trReportNum{} E \hfill ISBN \trISBN{}\\
 Cat. No. Fs97-6/\trReportNum{} E-PDF \hfill ISSN 1488-5379
 \end{minipage}
 \end{center}
@@ -329,7 +329,7 @@ Correct citation for this publication:
 % Settings for the main document
 \pagenumbering{arabic}  % Regular page numbers
 \pagestyle{fancy}  % No page number on first page of main document, use 'empty'
-\renewcommand*{\thefootnote}{\arabic{footnote}}  % Back to numeric footnotes
+% \renewcommand*{\thefootnote}{\arabic{footnote}}  % Back to numeric footnotes
 \setcounter{footnote}{0}  % And start at 1
 
 }% End of frontmatter
