@@ -12,7 +12,7 @@
 % \RequirePackage{setspace}  % Extra space between lines (editing)
 \RequirePackage{lastpage}  % Count total number of pages
 % \RequirePackage[nottoc, numbib]{tocbibind}  % Add index to TOC
-\RequirePackage{hanging}  % Hanging paragraphs (i.e., citations)
+% \RequirePackage{hanging}  % Hanging paragraphs (i.e., citations)
 \RequirePackage{placeins}  % Better float placement
 \RequirePackage{flafter}  % Floats after cross-references
 \RequirePackage{sectsty}  % Change section formatting
@@ -175,9 +175,12 @@
 
 % New definition: Citation
 \newcommand{\trCitation}{
-\begin{hangparas}{1em}{1}
-\trAuthsBack{} \trYear{}. \trTitle{}. Can. Tech. Rep. Fish. Aquat. Sci. \trReportNum{}: \pageref{TRlastRoman}{}\,+\,\pageref{LastPage}{}\,p.
-\end{hangparas}}
+\hangindent=1em
+\trAuthsBack{} \trYear{}. \trTitle{}.
+Can. Tech. Rep. Fish. Aquat. Sci.
+\trReportNum{}: \pageref{TRlastRoman}{}\,+\,\pageref{LastPage}{}\,p.
+\par
+}
 
 %%%%% Frontmatter %%%%%
 \def\frontmatter{%
@@ -303,8 +306,7 @@ Cat. No. Fs97-6/\trReportNum{} E-PDF \hfill ISSN 1488-5379
 \bigskip
 \noindent
 Correct citation for this publication:
-\bigskip
-\par
+\bigskip\par
 \trCitation{}
 \clearpage
 
@@ -320,12 +322,12 @@ Correct citation for this publication:
 % Abstract page(s)
 \section*{ABSTRACT}\addcontentsline{toc}{section}{ABSTRACT}
 \trCitation{}
-\bigskip
+\par\bigskip
 \trAbstract{}
 \clearpage
 \section*{RÉSUMÉ}\addcontentsline{toc}{section}{RÉSUMÉ}
 \trCitation{}
-\bigskip
+\par\bigskip
 \trResume{}
 \label{TRlastRoman}
 \clearpage
