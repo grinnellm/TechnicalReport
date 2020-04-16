@@ -34,10 +34,11 @@
 % \RequirePackage[utf8]{inputenc}  % French accents
 \RequirePackage{tabulary}  % Flexible column widths
 % \RequirePackage{rotating}  % Sideways floats
-% \RequirePackage{enumitem}
+\RequirePackage{enumitem}
 
 % Space around lists -- none
-% \setlist{nosep}
+\setlist{itemsep=0pt,topsep=0pt}
+% \setlist[itemize]{topsep=\parskip}
 
 % Hyper links
 \hypersetup{colorlinks,
@@ -109,8 +110,8 @@
 % Yes, ugly, but that's the rules (Or is it? Might not be required)
 %\raggedright  % Ragged right
 %\raggedbottom  % Ragged bottom
-%\setlength\parindent{0pt}  % No indent paragraphs
-%\parskip 2ex  % Increase white space between paragraphs
+% \setlength\parindent{0pt}  % No indent paragraphs
+% \parskip 2ex  % Increase white space between paragraphs
 %\captionsetup{justification=raggedright, singlelinecheck=off}
 %\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
 
@@ -176,6 +177,7 @@
 % New definition: Citation
 \newcommand{\trCitation}{
 \hangindent=1em
+\hangafter=1
 \trAuthsBack{} \trYear{}. \trTitle{}.
 Can. Tech. Rep. Fish. Aquat. Sci.
 \trReportNum{}: \pageref{TRlastRoman}{}\,+\,\pageref{LastPage}{}\,p.
@@ -304,10 +306,10 @@ Cat. No. Fs97-6/\trReportNum{} E-PDF \hfill ISSN 1488-5379
 \end{center}
 \par
 \bigskip
-\noindent
+{\setlength{\parindent}{0cm}
 Correct citation for this publication:
-\bigskip\par
-\trCitation{}
+\par\bigskip
+\trCitation{}}
 \clearpage
 
 % Add TOC to pdf bookmarks (clickable pdf)
@@ -323,12 +325,12 @@ Correct citation for this publication:
 \section*{ABSTRACT}\addcontentsline{toc}{section}{ABSTRACT}
 \trCitation{}
 \par\bigskip
-\trAbstract{}
+{\setlength{\parindent}{0cm}\trAbstract{}}
 \clearpage
 \section*{RÉSUMÉ}\addcontentsline{toc}{section}{RÉSUMÉ}
 \trCitation{}
 \par\bigskip
-\trResume{}
+{\setlength{\parindent}{0cm}\trResume{}}
 \label{TRlastRoman}
 \clearpage
 
