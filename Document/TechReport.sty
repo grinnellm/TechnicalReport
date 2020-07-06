@@ -146,6 +146,11 @@
 % % Words that stay lowercase (for title case)
 % \Addlcwords{a and as but etc for if in is of on the to with pallasii}
 
+% Better columns for longtable
+\usepackage{array}
+\usepackage{ragged2e}
+\newcolumntype{P}[1]{>{\RaggedRight\hspace{0pt}}p{#1}}
+
 % Better treatment of input (no extra trailing space)
 \newcommand{\inputsp}[1]{\input{#1}\unskip}
 
