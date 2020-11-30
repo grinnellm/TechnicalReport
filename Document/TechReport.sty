@@ -16,6 +16,7 @@
 % \RequirePackage{hanging}  % Hanging paragraphs (i.e., citations)
 \RequirePackage{placeins}  % Better float placement
 \RequirePackage{flafter}  % Floats after cross-references
+\RequirePackage{hyperref}  % Better cross references
 \RequirePackage[english]{babel}  % Typographics and hyphenation
 % \RequirePackage{titlecaps}  %  Case options for title
 \RequirePackage{textcase}  % More case options for title
@@ -23,7 +24,6 @@
 \RequirePackage{lmodern}  % Nicer (c) symbol
 \RequirePackage{calc}  % Text length calculations
 \RequirePackage[authoryear]{natbib}  % Citations
-\RequirePackage{hyperref}  % Better cross references
 \RequirePackage{letltxmacro}  % Enable/disable footnotes
 % \RequirePackage{pdfpages}  % Include PDF documents
 % \RequirePackage[T1]{fontenc}  % Allow french characters (Resume)
@@ -36,6 +36,14 @@
 \RequirePackage{pdflscape}  % Sideways floats
 \RequirePackage{enumitem}  % Vertical lists
 \RequirePackage{afterpage}  % Nicer longtable/landscape placement
+
+% Call subsections, subsubsections etc by simply "section"
+\addto\captionsenglish{
+\renewcommand{\subsectionautorefname}{section}
+\renewcommand{\subsubsectionautorefname}{section}
+}
+\let\subsectionautorefname\sectionautorefname
+\let\subsubsectionautorefname\sectionautorefname
 
 % Space around lists -- none
 \setlist{itemsep=0pt,topsep=0pt}
