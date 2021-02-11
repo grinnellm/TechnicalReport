@@ -179,19 +179,6 @@
   \parfillskip \z@skip}
 \makeatother
 
-% Footnote fun
-\LetLtxMacro\Oldfootnote\footnote
-
-% Enable footnotes
-\newcommand{\EnableFootNotes}{%
-  \LetLtxMacro\footnote\Oldfootnote%
-}
-
-% Disable footnotes (on the cover page)
-\newcommand{\DisableFootNotes}{%
-  \renewcommand{\footnote}[2][]{\relax}
-}
-
 % New definition: Citation
 \newcommand{\trCitation}{
 \hangindent=1em
@@ -209,15 +196,14 @@ Can. Tech. Rep. Fish. Aquat. Sci.
 \renewcommand\listfigurename{LIST OF FIGURES}
 \renewcommand\listtablename{LIST OF TABLES}
 
-% % Footnote symbols in front matter
-% \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
-
 % Prevent issues with the first two unnumbered pages
 \hypersetup{pageanchor=false}
 
 % First page: cover
-\thispagestyle{fancyplain}
-\DisableFootNotes
+\thispagestyle{fancy}
+\lhead{} \chead{} \rhead{} \cfoot{}
+\lfoot{\includegraphics[height=7mm, keepaspectratio]{\locRes/LogoDFO.png}}
+\rfoot{\includegraphics[height=7mm, keepaspectratio]{\locRes/LogoCanada.jpg}}
 \noindent
 \begin{flushleft}
 \LARGE
@@ -233,16 +219,11 @@ Can. Tech. Rep. Fish. Aquat. Sci.
 \LARGE
 \textbf{Canadian Technical Report of\\
 Fisheries and Aquatic Sciences \trReportNum{}}
-\lfoot{\includegraphics[height=7mm, keepaspectratio]{\locRes/LogoDFO.png}}
-\cfoot{}
-\rfoot{\includegraphics[height=7mm, keepaspectratio]{\locRes/LogoCanada.jpg}}
 \end{flushleft}
-\EnableFootNotes
 \clearpage
 
 % Second page: Technical report
 \footnotesize
-\lfoot{} \cfoot{\thepage} \rfoot{}
 \thispagestyle{empty}
 \begin{center}
 \textbf{Canadian Technical Report of Fisheries and Aquatic Sciences}
@@ -353,9 +334,8 @@ Correct citation for this publication:
 \clearpage
 
 % Settings for the main document
-\pagenumbering{arabic}  % Regular page numbers
-\pagestyle{fancy}  % No page number on first page of main document, use 'empty'
-% \renewcommand*{\thefootnote}{\arabic{footnote}}  % Back to numeric footnotes
-\setcounter{footnote}{0}  % And start at 1
+\pagenumbering{arabic}
+\pagestyle{fancy}
+\fancyhf{} \lfoot{} \cfoot{\thepage} \rfoot{}
 
 }% End of frontmatter
