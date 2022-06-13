@@ -22,7 +22,6 @@
 \RequirePackage{textcase}  % More case options for title
 \RequirePackage[labelsep=period,font=sl]{caption}  % Dots in captions and slant
 \RequirePackage{lmodern}  % Nicer (c) symbol
-\RequirePackage{calc}  % Text length calculations
 \RequirePackage[authoryear]{natbib}  % Citations
 \RequirePackage{letltxmacro}  % Enable/disable footnotes
 % \RequirePackage{pdfpages}  % Include PDF documents
@@ -298,11 +297,10 @@ by
 % Fourth page: Colophon
 \vspace*{\fill}
 \begin{center}
-\begin{minipage}{\widthof{\copyright{} Her Majesty the Queen in Right of Canada, \trYear{}}}
 \copyright{} Her Majesty the Queen in Right of Canada, \trYear{}\\
-Cat. No. Fs97-6/\trReportNum{} E \hfill ISBN \trISBN{}\\
-Cat. No. Fs97-6/\trReportNum{} E-PDF \hfill ISSN 1488-5379
-\end{minipage}
+Cat. No. Fs97-6/\trReportNum{} E-PDF \hfill
+ISBN \trISBN{} \hfill
+ISSN 1488-5379
 \end{center}
 \par
 \bigskip
